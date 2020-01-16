@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Pet & Name Chosing App - You're next pet is just a click away!">
+		<meta name="keywords" content="pet, names, choser">
+
+		<title>Pawfect Pets</title>
+		
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<script>
+		
+			// List of pet types
+			var pets = [
+				'Tarsier',
+				'Viperfish',
+				'Bald Uakari',
+				'Mata Mata',
+				'Lowland Streaked Tenrec',
+				'Axolotl',
+				'Babirusa',
+				'Proboscis Monkey',
+				'Puss Moth Larva',
+				'Ground Pangolin',
+				'Leaf-Horned Frog',
+				'Shoebill'
+
+			];
+
+			// List of pet images
+
+			var petimages = [
+				'https://i.telegraph.co.uk/multimedia/archive/03333/The_tarsier_has_ey_3333452b.jpg',
+				'https://i.telegraph.co.uk/multimedia/archive/03333/viperfishUSE_3333473b.jpg',
+				'https://i.telegraph.co.uk/multimedia/archive/03333/uakari_3333538b.jpg',
+				'https://i.telegraph.co.uk/multimedia/archive/03333/mata-mata_3333591b.jpg',
+				'https://i.telegraph.co.uk/multimedia/archive/03333/tenrec-attis-1979_3333634b.jpg',
+				'https://i.telegraph.co.uk/multimedia/archive/03333/Axolotlth_3333649b.jpg',
+				'https://i.telegraph.co.uk/multimedia/archive/03333/masteraah-babirusa_3333658b.jpg',
+				'https://i.telegraph.co.uk/multimedia/archive/03333/proboscis_3333686b.jpg',
+				'https://i.telegraph.co.uk/multimedia/archive/03333/puss-moth-use_3333741b.jpg',
+				'https://i.telegraph.co.uk/multimedia/archive/03333/pangolin_3333762b.jpg',
+				'https://i.telegraph.co.uk/multimedia/archive/03333/frog_3333778b.jpg',
+				'https://i.telegraph.co.uk/multimedia/archive/03333/snowmanradio_3333792b.jpg'
+
+
+			];
+
+			// List of pet names
+			var names = [
+				'Jebadiah',
+				'Lucifer',
+				'Mr President',
+				'Angel',
+				'Chris',
+				'Bob',
+				'Bilbo',
+				'Sam',
+				'Chad',
+				'Queen Elizabeth'
+
+
+			];
+
+			var randomNumberPet = Math.floor(Math.random()*pets.length);
+			var randomNumberName = Math.floor(Math.random()*names.length);
+			var randomNumberImage = Math.floor(Math.random()*petimages.length);
+
+			var pettype = pets[randomNumberPet];
+			var petname = names[randomNumberName];
+			var petimages = petimages[randomNumberPet];
+
+			document.write("<h4>Your next pet is...</h4>");
+			document.write("A <strong>" + pettype + "</strong> called <strong>" + petname + "</strong>!<br>");
+			document.write("<img src='" + petimages + "'>");
+
+			// document.write("<a href="javascript:location.reload(true)">Choose a new pet + name</a>");
+
+		
+		
+		</script>
+	</head>
+	<body>
+		<!-- Page Content --> 
+		<div>
+			<h4>Thats a load of sh*t,
+				<button>
+					<a href="javascript:location.reload(true)">Choose a new pet + name</a>
+				</button>
+			</h4>
+		</div>
+	</body>
+</html>
